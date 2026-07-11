@@ -7,6 +7,7 @@ import { workFilters, works } from "../data";
 
 export default function Work() {
   const [filter, setFilter] = useState("all");
+
   const filtered = works.filter((w) => w.category.includes(filter));
 
   return (
@@ -45,7 +46,7 @@ export default function Work() {
               {filtered.map((w) => (
                 <motion.div
                   layout
-                  key={w.title}
+                  key={w.id || w.title}
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.92 }}

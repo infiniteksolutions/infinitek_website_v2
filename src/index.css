@@ -254,6 +254,9 @@ body.cursor-on, body.cursor-on *{cursor:none !important}
 .m-body h3{color:#fff; font-size:1.25rem; letter-spacing:-.015em; margin-bottom:5px}
 .m-body .role{font-family:"Space Grotesk",sans-serif; color:var(--lime); font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px}
 .m-body p{color:rgba(255,255,255,.62); font-size:.9rem; line-height:1.6}
+.m-body p.clamp-3{display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
+.m-readmore{margin-top:8px; background:none; border:none; padding:0; color:var(--lime); font-family:"Space Grotesk",sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.03em; cursor:pointer}
+.m-readmore:hover{text-decoration:underline}
 
 /* ---- pricing ---- */
 .price-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; align-items:stretch}

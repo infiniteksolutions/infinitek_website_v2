@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Reveal from "./Reveal";
 import { team } from "../data";
 
@@ -8,6 +9,36 @@ const initials = (name) =>
     .slice(0, 2)
     .map((w) => w[0].toUpperCase())
     .join("");
+
+function MemberIntro({ text }) {
+  const pRef = useRef(null);
+  const [expanded, setExpanded] = useState(false);
+  const [overflowing, setOverflowing] = useState(false);
+
+  useEffect(() => {
+    const el = pRef.current;
+    if (el && !expanded) {
+      setOverflowing(el.scrollHeight > el.clientHeight + 1);
+    }
+  }, [text, expanded]);
+
+  return (
+    <>
+      <p ref={pRef} className={expanded ? "" : "clamp-3"}>
+        {text}
+      </p>
+      {(overflowing || expanded) && (
+        <button
+          type="button"
+          className="m-readmore"
+          onClick={() => setExpanded((v) => !v)}
+        >
+          {expanded ? "Read less" : "Read more"}
+        </button>
+      )}
+    </>
+  );
+}
 
 export default function Team() {
   return (
@@ -46,7 +77,7 @@ export default function Team() {
                 <div className="m-body">
                   <h3>{m.name}</h3>
                   <div className="role">{m.role}</div>
-                  <p>{m.intro}</p>
+                  <MemberIntro text={m.intro} />
                 </div>
               </div>
             </Reveal>

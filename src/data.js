@@ -8,6 +8,7 @@ import {
   Cpu,
   Headphones,
 } from "lucide-react";
+import worksData from "./data/works.json";
 
 export const NAV = [
   ["Home", "home"],
@@ -50,10 +51,7 @@ export const SERVICES = [
     Icon: Smartphone,
     title: "Mobile & App Development",
     desc: "Cross-platform and native mobile applications.",
-    points: [
-      "Hybrid Apps (React Native)",
-      "Native iOS & Android Apps",
-    ],
+    points: ["Hybrid Apps (React Native)", "Native iOS & Android Apps"],
   },
   {
     no: "04",
@@ -208,44 +206,10 @@ export const workFilters = [
   { value: "marketing", label: "Marketing" },
 ];
 
-export const works = [
-  {
-    cover: "/images/infingration.webp",
-    title: "Infinigration CRM",
-    description:
-      "A custom CRM built for a visa immigration business, managing roles like sales, marketing, finance, operations, and admin. Designed for smooth workflow and role-based access.",
-    preview: "",
-    codeBase: "",
-    category: ["all", "development", "custom crm"],
-  },
-  {
-    cover: "/images/iqra.webp",
-    title: "Iqra Quran Institute",
-    description:
-      "Designed and developed a clean, modern website for an international Quran teaching institute. Built to support students worldwide with an easy-to-navigate UI.",
-    preview: "",
-    codeBase: "",
-    category: ["all", "design", "development"],
-  },
-  {
-    cover: "/images/resourcify.webp",
-    title: "Resourcify",
-    description:
-      "A university platform for booking discussion rooms, borrowing library items, and accessing lab software. Built for students and staff at COMSATS University.",
-    preview: "",
-    codeBase: "",
-    category: ["all", "design", "development"],
-  },
-  {
-    cover: "/images/sparkpro.webp",
-    title: "Sparkpro",
-    description:
-      "Handled both design and development for this BPO company's website. Focused on clean visuals, service highlights, and a professional brand identity.",
-    preview: "",
-    codeBase: "",
-    category: ["all", "design", "development"],
-  },
-];
+// Source of truth lives in ./data/works.json — the admin page's CRUD API
+// reads/writes that file directly. This import is the static/build-time
+// snapshot Work.jsx falls back to when the admin API isn't running.
+export const works = worksData;
 
 // ---- Team ----
 // Add a photo to /public/images/team/ and reference it here. If `photo` is
@@ -256,14 +220,14 @@ export const team = [
     name: "Kashif Iqbal",
     role: "CEO & Founder",
     intro:
-      "Leads Infinitek's vision and client partnerships, making sure every build is grounded in how your business actually runs.",
+      "Founder of Infinitek Solutions, dedicated to building innovative digital solutions that empower businesses to grow. Focused on web development, AI, automation, and technology-driven transformation.",
   },
   {
     photo: "/images/team/maariyam.jpeg",
     name: "Mariyam Ghulam",
     role: "Co Founder",
     intro:
-      "Short introduction goes here — what they specialize in and the value they bring to your projects.",
+      "Co-Founder of Infinitek Solutions, helping businesses accelerate growth through innovative technology, AI, and digital transformation.Committed to delivering scalable digital solutions that drive efficiency, innovation, and long-term success.",
   },
   {
     photo: "/images/team/shahzaib.png",

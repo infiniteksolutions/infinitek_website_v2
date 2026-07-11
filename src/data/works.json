@@ -1,0 +1,54 @@
+[
+  {
+    "id": "infinigration-crm",
+    "cover": "/images/work/9e6674f3-ab8f-45ce-808f-78f31ec60655.webp",
+    "title": "Infinigration CRM",
+    "description": "A custom CRM built for a visa immigration business, managing roles like sales, marketing, finance, operations, and admin. Designed for smooth workflow and role-based access.",
+    "preview": "",
+    "codeBase": "",
+    "category": [
+      "development",
+      "custom crm",
+      "all"
+    ]
+  },
+  {
+    "id": "iqra-quran-institute",
+    "cover": "/images/work/0b829e3c-d812-4831-8357-b73c495a8fdf.webp",
+    "title": "Iqra Quran Institute",
+    "description": "Designed and developed a clean, modern website for an international Quran teaching institute. Built to support students worldwide with an easy-to-navigate UI.",
+    "preview": "",
+    "codeBase": "",
+    "category": [
+      "design",
+      "development",
+      "all"
+    ]
+  },
+  {
+    "id": "resourcify",
+    "cover": "/images/work/89b167a7-94d7-4468-bb47-92807b078975.webp",
+    "title": "Resourcify",
+    "description": "A university platform for booking discussion rooms, borrowing library items, and accessing lab software. Built for students and staff at COMSATS University.",
+    "preview": "",
+    "codeBase": "",
+    "category": [
+      "design",
+      "development",
+      "all"
+    ]
+  },
+  {
+    "id": "sparkpro",
+    "cover": "/images/work/49bc481f-3745-42f7-bd9c-a8d816f24dd0.webp",
+    "title": "Sparkpro",
+    "description": "Handled both design and development for this BPO company's website. Focused on clean visuals, service highlights, and a professional brand identity.",
+    "preview": "",
+    "codeBase": "",
+    "category": [
+      "design",
+      "development",
+      "all"
+    ]
+  }
+]
